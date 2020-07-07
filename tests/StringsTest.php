@@ -79,21 +79,21 @@ class StringsTest extends TestCase
         $this->assertEquals(0, strncasecmp('hel', 'hello', 2));
 
         // str_replace — Replace all occurrences of the search string with the replacement string
-        // TODO to be implemented
+        $this->assertEquals('hello World', str_replace('Hellllllo', 'hello', 'Hellllllo World'));
 
         // strpos — Find the position of the first occurrence of a substring in a string
-        // TODO to be implemented
+        $this->assertEquals(8, strpos('Hello World', 'r'));
 
         // strstr — Find the position of the first occurrence of a substring in a string
-        // TODO to be implemented
+        $this->assertEquals('world', strstr('Hello world', 'world'));
 
         // strrchr — Find the last occurrence of a character in a string
-        // TODO to be implemented
+        $this->assertEquals('orld', strrchr('Hello world', 'o'));
 
         // substr — Return part of a string
-        // TODO to be implemented
+        $this->assertEquals('llo worl', substr('Hello world', 2, 8));
 
         // sprintf — Return a formatted string
-        // TODO to be implemented
+        $this->assertEquals('Hello world', sprintf('Hello %s', 'world'));
     }
 }
